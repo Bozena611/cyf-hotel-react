@@ -1,5 +1,12 @@
+/** { 
+  border: 1px solid red; 
+}*/
+
 .App {
   text-align: left;
+  background-color: orange;
+  margin-bottom: 0;
+  overflow: auto;
 }
 
 .App-logo {
@@ -8,6 +15,8 @@
 }
 
 .App-header {
+  display: flex;
+  align-items: center;
   background-color: #222;
   height: 50px;
   padding: 20px;
@@ -18,6 +27,12 @@
   font-weight: bold;
 }
 
+.App-header img {
+  height: 40px;
+  width: auto;
+  margin-right: 1em;
+}
+
 .App-title {
   font-size: 1.5em;
 }
@@ -25,6 +40,12 @@
 .App-content {
   padding-top: 20px;
   font-size: large;
+}
+
+.CardsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3em;
 }
 
 @keyframes App-logo-spin {
@@ -50,8 +71,23 @@ tr {
 .footer {
   padding-top: 20px;
   text-align: center;
+  background-color: #222;
+  color: white;
+  margin-bottom: 0;
+}
+
+.footer ul {
+  list-style: none;
+  margin-bottom: 0;
 }
 
 .card {
   width: 18rem;
+  text-align: center;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
 }
