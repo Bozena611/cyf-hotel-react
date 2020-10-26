@@ -9,6 +9,7 @@ const OneCard = props => {
         <a
           href={"http://" + props.url}
           target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-primary"
         >
           Go to {props.name}
