@@ -95,3 +95,8 @@ tr {
 .table {
   text-align: center;
 }
+
+.Text-color {
+  color: #fffafa;
+  font-size: 16px;
+}
