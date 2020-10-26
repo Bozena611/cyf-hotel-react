@@ -1,40 +1,37 @@
 import React from "react";
+import SearchResultsRow from "./SearchResultsRow";
+import SearchResultsHead from "./SearchResultsHead";
 
-const SearchResults = () => {
+const SearchResults = props => {
+  console.log("results", props.results);
   return (
     <div>
       <table class="table table-hover table-dark">
         <thead>
           <tr>
-            <th scope="col">id</th>
-            <th scope="col">Title</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Surname</th>
-            <th scope="col">email</th>
-            <th scope="col">room id</th>
-            <th scope="col">check in date</th>
-            <th scope="col">check out date</th>
+            <SearchResultsHead />
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
+        {props.results.map((element, i) => {
+          console.log("map", props.results.i);
+          return (
+            <tbody>
+              <tr>
+                <SearchResultsRow
+                  key={i}
+                  id={element.id}
+                  title={element.title}
+                  name={element.firstName}
+                  surname={element.surname}
+                  email={element.email}
+                  roomId={element.roomId}
+                  checkin={element.checkInDate}
+                  checkout={element.checkOutDate}
+                />
+              </tr>
+            </tbody>
+          );
+        })}
       </table>
     </div>
   );

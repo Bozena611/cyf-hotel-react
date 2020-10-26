@@ -91,3 +91,7 @@ tr {
   height: 15vw;
   object-fit: cover;
 }
+
+.table {
+  text-align: center;
+}
