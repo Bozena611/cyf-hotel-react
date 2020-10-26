@@ -1,36 +1,15 @@
 import React from "react";
-import SearchResultsRow from "./SearchResultsRow";
-import SearchResultsHead from "./SearchResultsHead";
+import TableHead from "./TableHead";
+import TableBody from "./TableBody";
 
 const SearchResults = props => {
-  console.log("results", props.results);
   return (
     <div>
-      <table class="table table-hover table-dark">
-        <thead>
-          <tr>
-            <SearchResultsHead />
-          </tr>
-        </thead>
+      <table className="table table-bordered table-hover table-dark">
+        <TableHead />
         {props.results.map((element, i) => {
-          console.log("map", props.results.i);
-          return (
-            <tbody>
-              <tr>
-                <SearchResultsRow
-                  key={i}
-                  id={element.id}
-                  title={element.title}
-                  name={element.firstName}
-                  surname={element.surname}
-                  email={element.email}
-                  roomId={element.roomId}
-                  checkin={element.checkInDate}
-                  checkout={element.checkOutDate}
-                />
-              </tr>
-            </tbody>
-          );
+          console.log("map", element);
+          return <TableBody key={i} element={element} />;
         })}
       </table>
     </div>
