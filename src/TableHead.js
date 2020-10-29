@@ -4,7 +4,7 @@ const TableHead = () => {
   return (
     <thead>
       <tr className="Text-color">
-        <th scope="col">#</th>
+        <th scope="col">ID</th>
         <th scope="col">Title</th>
         <th scope="col">First Name</th>
         <th scope="col">Surname</th>

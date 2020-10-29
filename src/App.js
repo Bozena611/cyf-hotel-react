@@ -4,6 +4,7 @@ import "./App.css";
 import Heading from "./Heading";
 import TouristInfoCards from "./TouristInfoCards";
 import Footer from "./Footer";
+import Restaurant from "./Restaurant";
 
 let hotels = [
   {
@@ -38,6 +39,7 @@ const App = () => {
       <Heading />
       <TouristInfoCards hotels={hotels} />
       <Bookings />
+      <Restaurant />
       <Footer className="footer" addressList={footer} />
     </div>
   );
