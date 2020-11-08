@@ -105,12 +105,8 @@ tr {
   margin-top: 2vh;
 }
 
-.red {
+.selected {
   background-color: red;
-}
-
-.yellow {
-  background-color: none;
 }
 
 .pizza-orders {

@@ -8,29 +8,20 @@ const TableBody = props => {
   let element = props.element;
   let checkIn = moment(props.element.checkInDate);
   let checkOut = moment(props.element.checkOutDate);
-  /*
-  const [selected, setSelected] = useState(false);
-  let color;
+
+  const [selected, setSelected] = useState("false");
 
   const handleClick = () => {
-    setSelected(true);
-    if (selected===true) {
-      console.log(true);
-      color = "red";
-    }
-  }
-  */
-
-  const [selected, setSelected] = useState("yellow");
-
-  const handleClick = () => {
-    setSelected("red");
-    return false;
+    setSelected(!selected);
   };
 
   return (
     <tbody>
-      <tr className="Text-color" className={selected} onClick={handleClick}>
+      <tr
+        className="Text-color"
+        className={selected ? null : "selected"}
+        onClick={handleClick}
+      >
         <th scope="row">{element.id}</th>
         <td>{element.title}</td>
         <td>{element.firstName}</td>
