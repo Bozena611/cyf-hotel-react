@@ -4,10 +4,6 @@ import SearchResults from "./SearchResults.js";
 //import FakeBookings from "./data/fakeBookings.json";
 
 const Bookings = () => {
-  const search = searchVal => {
-    console.info("TO DO!", searchVal);
-  };
-
   // week 3 ex-16
   const [bookings, setBookings] = useState([]);
 
@@ -15,10 +11,21 @@ const Bookings = () => {
     fetch(`https://cyf-react.glitch.me`)
       .then(res => res.json())
       .then(data => {
-        //console.log("Bookings", data);
+        console.log("Bookings", data[0].firstName);
         setBookings(data);
       });
   }, []);
+
+  // week 3 ex-19
+  const search = searchVal => {
+    console.info("TO DO!", searchVal);
+    console.log("state", bookings);
+    const filteredBookings = bookings.filter(
+      element =>
+        element.firstName === searchVal || element.surname === searchVal
+    );
+    setBookings(filteredBookings);
+  };
 
   return (
     <div className="App-content">
