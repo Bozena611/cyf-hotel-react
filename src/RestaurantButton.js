@@ -1,7 +1,7 @@
 import React from "react";
 
 const RestaurantButton = props => {
-  console.log("button", props);
+  //console.log("button", props);
   return (
     <button className="btn btn-primary" onClick={props.handleClick}>
       Add

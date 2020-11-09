@@ -1,7 +1,7 @@
 import React from "react";
 
 const OneCard = props => {
-  console.log(props.url);
+  //console.log(props.url);
   return (
     <div className="card">
       <img src={props.img} className="card-img-top" alt={props.name} />

@@ -8,7 +8,7 @@ const SearchResults = props => {
       <table className="table table-bordered table-hover table-dark">
         <TableHead />
         {props.results.map((element, i) => {
-          console.log("map", element);
+          //console.log("map", element);
           return <TableBody key={i} element={element} />;
         })}
       </table>
