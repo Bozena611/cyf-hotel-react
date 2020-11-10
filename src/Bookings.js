@@ -12,7 +12,7 @@ const Bookings = () => {
     fetch(`https://cyf-react.glitch.me/delayed`)
       .then(res => res.json())
       .then(data => {
-        console.log("Bookings", data[0].firstName);
+        //console.log("Bookings", data[0].firstName);
         setBookings(data);
         setLoading(true);
       });
@@ -31,14 +31,18 @@ const Bookings = () => {
 
   return (
     <div className="App-content">
-      <div className="container">
-        <Search search={search} />
-        {loading ? (
-          <SearchResults results={bookings} />
-        ) : (
-          <span>Loading... Please wait</span>
-        )}
-      </div>
+      {bookings ? (
+        <div className="container">
+          <Search search={search} />
+          {loading ? (
+            <SearchResults results={bookings} />
+          ) : (
+            <span>Loading... Please wait</span>
+          )}
+        </div>
+      ) : (
+        <span>Error</span>
+      )}
     </div>
   );
 };
