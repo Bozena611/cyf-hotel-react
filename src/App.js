@@ -5,6 +5,7 @@ import Heading from "./Heading";
 import TouristInfoCards from "./TouristInfoCards";
 import Footer from "./Footer";
 import Restaurant from "./Restaurant";
+import NewBooking from "./NewBooking";
 
 let hotels = [
   {
@@ -40,6 +41,7 @@ const App = () => {
       <TouristInfoCards hotels={hotels} />
       <Bookings />
       <Restaurant />
+      <NewBooking />
       <Footer className="footer" addressList={footer} />
     </div>
   );

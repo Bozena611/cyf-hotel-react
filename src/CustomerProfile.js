@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const CustomerProfile = props => {
-  console.log("customer", props.id);
+  //console.log("customer", props.id);
 
   const [customerId, setCustomerId] = useState("");
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ const CustomerProfile = props => {
     fetch(`https://cyf-react.glitch.me/customers/${props.id}`)
       .then(res => res.json())
       .then(data => {
-        console.log("profile", data);
+        // console.log("profile", data);
         setCustomerId(data.id);
         setEmail(data.email);
         if (data.vip === true) {

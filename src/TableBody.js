@@ -28,7 +28,7 @@ const TableBody = props => {
       <tbody>
         <tr
           className="Text-color"
-          className={selected ? null : "selected"}
+          className={selected ? null : "highlight"}
           onClick={changeColor}
         >
           <th scope="row">{element.id}</th>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchButton from "./SearchButton";
 
 const Search = props => {
-  console.log("search", props.search);
+  //console.log("search", props.search);
   // week 3 17. Storing the search input in a state
   const [searchInput, setSearchInput] = useState("");
 
@@ -13,7 +13,7 @@ const Search = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(props.search(searchInput));
+    //console.log(props.search(searchInput));
   };
   return (
     <div className="search">

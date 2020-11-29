@@ -105,7 +105,7 @@ tr {
   margin-top: 2vh;
 }
 
-.selected {
+.highlight {
   background-color: red;
 }
 
