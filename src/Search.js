@@ -13,7 +13,7 @@ const Search = props => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    //console.log(props.search(searchInput));
+    props.search(searchInput);
   };
   return (
     <div className="search">
